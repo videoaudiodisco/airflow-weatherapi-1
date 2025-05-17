@@ -1,0 +1,33 @@
+<aws ec2에 설치하는 명령어>
+
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3-venv
+python3 -m venv airflow_venv
+source airflow_venv/bin/activate
+
+pip 할때는 sudo 안써야 함
+
+pip install pandas
+pip install s3fs
+pip install apache-airflow
+pip install apache-airflow-providers-http
+airflow standalone
+
+로그인 할때는 airflow log에 정보 뜸
+
+(예시) 'admin': gsaYWNXfXygFeqbr
+
+airflow_venv 안에서
+sudo apt  install awscli --> 이거 오류나므로 chatgpt 방법으로 aws 설치해야 함
+
+<chatgpt 방법>
+sudo apt update
+sudo apt install unzip curl -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+aws configure  --> 여기에서 key,secret 입력
+aws sts get-session-token  --> token 정보 나오므로 이걸 aws_credential에 사용
