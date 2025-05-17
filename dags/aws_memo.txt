@@ -31,3 +31,7 @@ aws --version
 
 aws configure  --> 여기에서 key,secret 입력
 aws sts get-session-token  --> token 정보 나오므로 이걸 aws_credential에 사용
+
+
+IAM role 등록시 AmazonEC2FullAccess, AmazonS3FullAccess 선택하고
+ec2 서버에 등록
